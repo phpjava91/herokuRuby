@@ -1,0 +1,82 @@
+<div class="jumbotron">
+  <h1>Launching Soon!</h1>
+  <p class="lead">Este proyecto será el mejor del mundo mundial. Sí deseas que te notifiquemos cuándo este listo el proyecto, por favor deja tus datos en la siguiente forma. Mejorando.la FTW!</p>
+
+    <%= form_tag('/waitinglist', :method => "post", :class => "form-inline") do -%>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <div class="input-group">
+           <div class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></div>
+            <input type="city" name="city" class="form-control" id="city" placeholder="City">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+            <input name="email" class="form-control" type="email" placeholder="Enter email">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <input type="submit" class="btn btn-large btn-success" value="Be the first to know!">
+      </div>
+    </div>
+  <% end %>
+
+</div>
+
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5">
+      <%= form_tag('/chat', :method => "post", :remote => true, :class => "form-inline") do -%>
+        <div class="row">
+          <div class="col-md-10">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                <input name='username' type='text' class="form-control" id='chat_username' placeholder="Nickname"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                <textarea name='message' id='chat_message' class="form-control" rows="4" placeholder="Deja tu mensaje"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <input type="submit" id="send_chat_message" class="btn btn-large btn-success" value="Say something">
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-7">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Participa en el chat de ProyectoX</div>
+        <div class="panel-body">
+          <ul class="list-group" id="chat_messages">
+          </ul>
+        </div>
+        <div class="panel-footer">
+          <small>Los mensajes no persistiran, es como snapchat!</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <a class="twitter-timeline" href="https://twitter.com/hashtag/soymejorandola" data-widget-id="502182145347964929">#soymejorandola Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    </div>
+  </div>
+</div>
